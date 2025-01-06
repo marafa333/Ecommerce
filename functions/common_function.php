@@ -349,37 +349,5 @@ function total_cart_price(){
 }
 // dynamic data fun
 function cart_table(){
-    global $conn;
-                        $get_ip_add = getIPAddress();
-                        $total_price=0;
-                        $cart_query="select * from `cart_details` where ip_address='$get_ip_add'";
-                        $result=mysqli_query($conn,$cart_query);
-                        while($row=mysqli_fetch_array($result)){
-                            $product_id= $row["product_id"];
-                            $select_product="select * from `products` where product_id='$product_id'";
-                            $result_product=mysqli_query($conn,$select_product);
-                        while($row_product_price=mysqli_fetch_array($result_product)){
-                            $product_price=array($row_product_price['product_price']);
-                            $table_price=$row_product_price['product_price'];
-                            $product_title=$row_product_price['product_title'];
-                            $product_image1=$row_product_price['product_image1'];
-                            $product_values=array_sum($product_price);
-                            $total_price+=$product_values;
-                            echo "
-                            <tr>
-                            <td>$product_title</td>
-<td><img src='./admin_area/product_images/$product_image1' class='img-thumbnail cart-img' alt='$product_title' />
-</td>
-<td><input class=' rounded form-input w-50' type='text'></td>
-<td>$table_price/-</td>
-<td><input type='checkbox' name='' id=''> </td>
-<td>
-    <button class='btn btn-warning'>Update</button>
-    <button class='btn btn-danger'>Remove</button>
-</td>
-</tr>
-";
-}
-}
 }
 ?>
