@@ -82,7 +82,7 @@ include("./functions/common_function.php");
                     <a class="nav-link text-dark" href="#">Welcome Guest</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="#">Login</a>
+                    <a class="nav-link text-dark" href="./users_area/user_login.php">Login</a>
                 </li>
             </ul>
         </nav>
@@ -112,7 +112,7 @@ include("./functions/common_function.php");
                 <ul class="navbar-nav me-auto text-center">
                     <li class="nav-item bg-dark ">
                         <a href="#" class="nav-link text-warning">
-                            <h4>Delivery Brands</h4>
+                            <h5>Delivery Brands</h5>
                         </a>
                     </li>
                     <?php
@@ -125,7 +125,7 @@ include("./functions/common_function.php");
                 <ul class="navbar-nav me-auto text-center">
                     <li class="nav-item bg-dark ">
                         <a href="#" class="nav-link text-warning">
-                            <h4>Categories</h4>
+                            <h5>Categories</h5>
                         </a>
                     </li>
                     <?php

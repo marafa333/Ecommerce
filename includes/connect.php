@@ -1,6 +1,7 @@
 <?php
-$conn = mysqli_connect('localhost','root','','mystore');
+$conn = mysqli_connect('localhost', 'root', '', 'mystore');
+
 if (!$conn) {
-    die(mysqli_error($conn));
+    die("Connection failed: " . mysqli_connect_error());
 }
 ?>

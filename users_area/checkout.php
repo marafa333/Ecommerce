@@ -1,5 +1,5 @@
 <?php
-include("./includes/connect.php");
+include("../includes/connect.php");
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +10,7 @@ include("./includes/connect.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecommerce - Checkout</title>
     <!-- Bootstrap css file -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- Font file -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
@@ -31,7 +31,7 @@ include("./includes/connect.php");
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.php"><img src="images/shopping-cart.png" alt="logo"
+                <a class="navbar-brand" href="index.php"><img src="../images/shopping-cart.png" alt="logo"
                         style="width:70px;"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -69,7 +69,7 @@ include("./includes/connect.php");
                     <a class="nav-link text-dark" href="#">Welcome Guest</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="#">Login</a>
+                    <a class="nav-link text-dark" href="user_login.php">Login</a>
                 </li>
             </ul>
         </nav>
@@ -83,14 +83,14 @@ include("./includes/connect.php");
 
         <!-- Content -->
         <div class="row container-fluid">
-            <div class="col-md-10">
+            <div class="col-md-12">
                 <!-- Products -->
                 <div class="row">
                     <?php
                     if(!isset($_SESSION['username'])){
-                        include("./users_area/user_login.php");
+                        include("./user_login.php");
                     }else{
-                        include("./payment.php");
+                        include("../payment.php");
                     }
                     ?>
                 </div>
@@ -99,13 +99,13 @@ include("./includes/connect.php");
 
         <!-- Footer -->
 
-        <?php  include("./includes/footer.php");  ?>
+        <?php  include("../includes/footer.php");  ?>
 
 
     </div>
 
 
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

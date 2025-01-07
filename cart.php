@@ -81,7 +81,7 @@ include("./functions/common_function.php");
                     <a class="nav-link text-dark" href="#">Welcome Guest</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="#">Login</a>
+                    <a class="nav-link text-dark" href="./users_area/user_login.php">Login</a>
                 </li>
             </ul>
         </nav>
@@ -180,7 +180,7 @@ include("./functions/common_function.php");
                         <h4 class='px-3'>Subtotal: <strong class='text-warning'>$total_price/-</strong>
                         </h4>
                          <input type='submit' name='Continue_Shopping' value='Continue Shopping' class='btn btn-warning mx-3'>
-                        <button class='btn btn-dark'><a href='checkout.php' class='nav-link'>Checkout</a></button>
+                        <button class='btn btn-dark'><a href='users_area/checkout.php' class='nav-link'>Checkout</a></button>
                         ";
                         } else {
                             echo "<input type='submit' name='Continue_Shopping' value='Continue Shopping' class='btn btn-warning mx-3'>";
