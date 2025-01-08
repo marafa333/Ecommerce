@@ -26,7 +26,7 @@ include("../includes/connect.php");
     </style>
 </head>
 
-<body class="bg-secondary">
+<body class="bg-secondary-subtle">
     <div class="container-fluid p-0">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
@@ -41,13 +41,13 @@ include("../includes/connect.php");
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+                            <a class="nav-link active" aria-current="page" href="../index.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="display_all.php">Products</a>
+                            <a class="nav-link" href="../display_all.php">Products</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Register</a>
+                            <a class="nav-link" href="./user_registration.php">Register</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contact</a>
@@ -69,13 +69,13 @@ include("../includes/connect.php");
                     <a class="nav-link text-dark" href="#">Welcome Guest</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="user_login.php">Login</a>
+                    <a class="nav-link text-dark" href="./user_login.php">Login</a>
                 </li>
             </ul>
         </nav>
 
         <!-- Title -->
-        <div class="bg-secondary">
+        <div>
             <h3 class="text-center">Hidden Store</h3>
             <p class="text-center">Communications is at the heart of e-commerce and
                 community</p>
@@ -90,7 +90,7 @@ include("../includes/connect.php");
                     if(!isset($_SESSION['username'])){
                         include("./user_login.php");
                     }else{
-                        include("../payment.php");
+                        include("./payment.php");
                     }
                     ?>
                 </div>

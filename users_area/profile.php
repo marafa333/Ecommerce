@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <h3>payment</h3>
+    <h1>profile</h1>
 </body>
 
 </html>

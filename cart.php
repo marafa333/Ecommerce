@@ -32,7 +32,7 @@ include("./functions/common_function.php");
     </style>
 </head>
 
-<body class="bg-secondary">
+<body class="bg-secondary-subtle">
     <div class="container-fluid p-0">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
@@ -53,7 +53,7 @@ include("./functions/common_function.php");
                             <a class="nav-link" href="display_all.php">Products</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Register</a>
+                            <a class="nav-link" href="./users_area/user_registration.php">Register</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contact</a>
@@ -87,7 +87,7 @@ include("./functions/common_function.php");
         </nav>
 
         <!-- Title -->
-        <div class="bg-secondary">
+        <div>
             <h3 class="text-center">Hidden Store</h3>
             <p class="text-center">Communications is at the heart of e-commerce and
                 community</p>

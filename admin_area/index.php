@@ -25,7 +25,7 @@
     </style>
 </head>
 
-<body class="bg-secondary">
+<body class="bg-secondary-subtle">
     <div class="container-fluid p-0">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
