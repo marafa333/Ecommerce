@@ -1,5 +1,7 @@
-<?php include('../includes/connect.php') ?>
-<?php include('../functions/common_function.php') ?>
+<?php include('../includes/connect.php');
+include('../functions/common_function.php');
+@session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,9 +12,9 @@
     <!-- Bootstrap css file -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <style>
-        body {
-            overflow-x: hidden;
-        }
+    body {
+        overflow-x: hidden;
+    }
     </style>
 </head>
 
@@ -69,7 +71,7 @@
                     } else {
                         $_SESSION['username'] = $username;
                         echo "<script>alert('Login Successfully')</script>";
-                        echo "<script>window.open('./payment.php','_self')</script>";
+                        echo "<script>window.open('./checkout.php','_self')</script>";
                     }
                 } else {
                     echo "<script>alert('Invalid Credentials')</script>";

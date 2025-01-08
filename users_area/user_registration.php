@@ -9,6 +9,11 @@
     <title>User - Registration</title>
     <!-- Bootstrap css file -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <style>
+    body {
+        overflow-x: hidden;
+    }
+    </style>
 </head>
 
 <body class="bg-secondary-subtle">

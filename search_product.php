@@ -1,6 +1,7 @@
 <?php
 include("./includes/connect.php");
 include("./functions/common_function.php");
+@session_start();
 ?>
 
 <!DOCTYPE html>
@@ -23,6 +24,10 @@ include("./functions/common_function.php");
         width: 100%;
         height: 200px;
         /* object-fit: contain; */
+    }
+
+    body {
+        overflow-x: hidden;
     }
     </style>
 </head>
@@ -78,12 +83,26 @@ include("./functions/common_function.php");
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-warning">
             <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                    <a class="nav-link text-dark" href="#">Welcome Guest</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" href="./users_area/user_login.php">Login</a>
-                </li>
+                <?php
+                if (!isset($_SESSION['username'])) {
+                    echo "<li class='nav-item'>
+                    <a class='nav-link text-dark' href='#'>Welcome Guest</a>";
+                }else{
+                    echo "
+                    <li class='nav-item'>
+                    <a class='nav-link text-dark' href='#'>Welcome ".$_SESSION['username']."</a>
+                </li>";
+                }
+                
+                if (!isset($_SESSION['username'])) {
+                    echo "<li class='nav-item'>
+                    <a class='nav-link text-dark' href='./users_area/user_Login.php'>Login</a>";
+                }else{
+                    echo "
+                    <li class='nav-item'>
+                    <a class='nav-link text-dark' href='./users_area/logout.php'>Logout</a>
+                </li>";
+                }?>
             </ul>
         </nav>
 
@@ -94,7 +113,7 @@ include("./functions/common_function.php");
         </div>
 
         <!-- Content -->
-        <div class="row container-fluid">
+        <div class="row m-1">
             <div class="col-md-10">
                 <!-- Products -->
                 <div class="row">
@@ -112,7 +131,7 @@ include("./functions/common_function.php");
                 <ul class="navbar-nav me-auto text-center">
                     <li class="nav-item bg-dark ">
                         <a href="#" class="nav-link text-warning">
-                            <h4>Delivery Brands</h4>
+                            <h5>Delivery Brands</h5>
                         </a>
                     </li>
                     <?php
@@ -125,7 +144,7 @@ include("./functions/common_function.php");
                 <ul class="navbar-nav me-auto text-center">
                     <li class="nav-item bg-dark ">
                         <a href="#" class="nav-link text-warning">
-                            <h4>Categories</h4>
+                            <h5>Categories</h5>
                         </a>
                     </li>
                     <?php

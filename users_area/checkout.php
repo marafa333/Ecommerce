@@ -1,5 +1,6 @@
 <?php
 include("../includes/connect.php");
+@session_start();
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +32,7 @@ include("../includes/connect.php");
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.php"><img src="../images/shopping-cart.png" alt="logo"
+                <a class="navbar-brand" href="../index.php"><img src="../images/shopping-cart.png" alt="logo"
                         style="width:70px;"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -53,7 +54,7 @@ include("../includes/connect.php");
                             <a class="nav-link" href="#">Contact</a>
                         </li>
                     </ul>
-                    <form class="d-flex" action="search_product.php" method="get" role="search">
+                    <form class="d-flex" action="../search_product.php" method="get" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" name="search_data"
                             aria-label="Search">
                         <input type="submit" class="btn btn-outline-warning" name="search_data_product" value="Search">
@@ -65,12 +66,27 @@ include("../includes/connect.php");
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-warning">
             <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                    <a class="nav-link text-dark" href="#">Welcome Guest</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" href="./user_login.php">Login</a>
-                </li>
+                <?php
+                if (!isset($_SESSION['username'])) {
+                    echo "<li class='nav-item'>
+                    <a class='nav-link text-dark' href='#'>Welcome Guest</a>";
+                }else{
+                    echo "
+                    <li class='nav-item'>
+                    <a class='nav-link text-dark' href='#'>Welcome ".$_SESSION['username']."</a>
+                </li>";
+                }
+                
+                if (!isset($_SESSION['username'])) {
+                    echo "<li class='nav-item'>
+                    <a class='nav-link text-dark' href='./user_Login.php'>Login</a>";
+                }else{
+                    echo "
+                    <li class='nav-item'>
+                    <a class='nav-link text-dark' href='./logout.php'>Logout</a>
+                </li>";
+                }?>
+
             </ul>
         </nav>
 
