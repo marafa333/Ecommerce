@@ -30,6 +30,14 @@ include("../functions/common_function.php");
         overflow-x: hidden;
     }
 
+
+
+    .edit_img {
+        width: 20%;
+        height: 100px;
+        object-fit: contain;
+    }
+
     .profile_img {
         width: 90%;
         margin: auto;
@@ -113,7 +121,7 @@ include("../functions/common_function.php");
         <!-- Content -->
         <div class="row">
             <div class="col-md-2">
-                <ul class="navbar-nav navbar-dark bg-warning text-center">
+                <ul class="navbar-nav navbar-dark bg-warning text-center" style="height: 100%;">
                     <li class="nav-item  bg-dark">
                         <a href="#" class="nav-link  text-light">
                             <h5>Your porfile</h5>
@@ -161,7 +169,11 @@ include("../functions/common_function.php");
                 </ul>
             </div>
             <div class="col-md-10">
-                <?php get_user_order_details(); ?>
+                <?php get_user_order_details();
+                if (isset($_GET['edit_account'])) {
+                    include("edit_account.php");
+                }
+                ?>
             </div>
             <!-- Footer -->
 
