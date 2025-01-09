@@ -24,6 +24,10 @@ include("../includes/connect.php");
         height: 200px;
         /* object-fit: contain; */
     }
+
+    body {
+        overflow-x: hidden;
+    }
     </style>
 </head>
 

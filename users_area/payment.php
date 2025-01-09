@@ -32,8 +32,7 @@ include('../functions/common_function.php');
         <h2 class="text-center text-warning my-2">Payment options</h2>
         <div class="row d-flex justify-content-center align-items-center my-5">
             <div class="col-md-6">
-                <a href="https://www.paypal.com" target="_blank"><img src="../admin_area/product_images/upi.jpg"
-                        alt="upi"></a>
+                <a href="https://www.paypal.com" target="_blank"><img src="../images/upi.jpg" alt="upi"></a>
             </div>
             <div class="col-md-2"></div>
             <div class="col-md-4">
